@@ -29,7 +29,7 @@ function Login() {
               body: dataToSend,
             };
             let JSONData = await fetch(
-              "http://localhost:4567/validateToken",
+              "/validateToken",
               reqOptions
             );
             let JSOData = await JSONData.json();
@@ -54,7 +54,7 @@ function Login() {
       body: dataToSend,
     };
     let JSONData = await fetch(
-      "http://localhost:4567/validateLogin",
+      "/validateLogin",
       reqOptions
     );
     let JSOData = await JSONData.json();
@@ -82,7 +82,7 @@ function Login() {
       //   body: dataToSend,
       // };
       // let JSONData = await fetch(
-      //   "http://localhost:4567/validateLogin",
+      //   "/validateLogin",
       //   reqOptions
       // );
       //let JSOData = await JSONData.json();

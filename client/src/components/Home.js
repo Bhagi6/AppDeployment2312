@@ -16,7 +16,7 @@ function Home() {
       body: dataToSend,
     };
     let JSONData = await fetch(
-      "http://localhost:4567/deleteProfile",
+      "/deleteProfile",
       reqOptions
     );
     let JSOData = await JSONData.json();

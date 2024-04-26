@@ -24,7 +24,7 @@ function EditProfile() {
     emailInputRef.current.value = storeObj.userDetails.email;
     moblieNoInputRef.current.value = storeObj.userDetails.moblieNo;
     profilePicInputRef.current.value = storeObj.userDetails.ProfilePic;
-    setprofilePic(`http://localhost:4567/${storeObj.userDetails.ProfilePic}`);
+    setprofilePic(`/${storeObj.userDetails.ProfilePic}`);
   }, []);
 
   let updateProfileUsingFD = async () => {
@@ -43,7 +43,7 @@ function EditProfile() {
       method: "PATCH",
       body: dataToSend,
     };
-    let JSONData = await fetch("http://localhost:4567/editprofile", reqOptions);
+    let JSONData = await fetch("/editprofile", reqOptions);
     let JSOData = await JSONData.json();
     alert(JSOData.msg);
     console.log(JSOData);
